@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      crossorigin="anonymous"></script>
+    <script src="javascript/Script.js"></script>
+
+    <title>Página</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" id="linkPrincipal">Página</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"
+              id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+                CADASTROS
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" id="linkListarSapatos">SAPATOS</a>
+                <a class="dropdown-item" href="#" id="linkListarPessoas">PESSOAS</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="linkListarSapateiras" href="#" >SAPATEIRAS</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="mensagem_principal" class="container">
+          <h2 class="jumbotron-heading">Bem-vindo à página principal</h2>
+          <p class="lead text-muted">
+            Essa é a página principal, você pode listar sapatos registrados, incluir um novo sapato na lista ou excluir um sapato existente.
+          </p>
+    </div>
+    <div id="listaSapatos" class="container">
+      <h2 class="mt-3 text-center">Sapatos registrados</h2>
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Modelo</th>
+              <th scope="col">Tamanho</th>
+              <th scope="col">Cor</th>
+              <th scope="col">Operação</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaSapatos">
+          </tbody>
+        </table>
+
+
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-success">INCLUIR</button>
+        </a>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Incluir um novo sapato</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md">
+                  <label for="input_title">Modelo</label>
+                  <input type="email" class="form-control" id="input_modelo" placeholder="Modelo do sapato">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="input_lang">Tamanho</label>
+                  <input type="text" class="form-control" id="input_tamanho" placeholder="Tamanho do sapato">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="input_author">Cor</label>
+                  <input type="text" class="form-control" id="input_cor" placeholder="Cor do sapato">
+                </div>
+              </div>
+            </form>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+            <button id="incluir_sapato" type="button" class="btn btn-primary">INCLUIR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="listaPessoas" class="container">
+      <h2 class="mt-3 text-center">Pessoas registrados</h2>
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Idade</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaPessoas">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="listaSapateiras" class="container">
+      <h2 class="mt-3 text-center">Sapateiras registrados</h2>
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Capacidade</th>
+              <th scope="col">Cor da Sapataria</th>
+              <th scope="col">Material</th>
+              <th scope="col">Modelo do sapato</th>
+              <th scope="col">Tamanho</th>
+              <th scope="col">Cor</th>
+              <th scope="col">Dono</th>
+              <th scope="col">Idade</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaSapateiras">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
